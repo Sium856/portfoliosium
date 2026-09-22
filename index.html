@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <title>Jahidul Islam Sium | CSE Undergraduate & AI Research Aspirant</title>
+  <meta name="description" content="Personal portfolio of Jahidul Islam Sium — CSE undergraduate at Daffodil International University, competitive programmer, and aspiring AI researcher in AI Ethics & Engineering." />
+  <meta name="author" content="Jahidul Islam Sium" />
+
+  <!-- OpenGraph / Social Metadata -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Jahidul Islam Sium | Portfolio" />
+  <meta property="og:description" content="CSE Undergraduate at Daffodil International University — problem solving, research mindset, and building toward the national IT revolution and AI ethics." />
+
+  <!-- Google Fonts: Outfit (Display), Fraunces (Serif) & Inter (Sans-Serif) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500..700;1,9..144,400..600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Portfolio Stylesheet (Pure CSS, zero dependencies) -->
+  <link rel="stylesheet" href="./style.css" />
+
+  <!-- Inline Theme Initializer (Defaults to Dark, supports High-Contrast Light) -->
+  <script>
+    (function() {
+      try {
+        const t = localStorage.getItem('jis_theme');
+        if (t === 'light') {
+          document.documentElement.setAttribute('data-theme', 'light');
+          document.documentElement.style.colorScheme = 'light';
+        } else {
+          document.documentElement.removeAttribute('data-theme');
+          document.documentElement.style.colorScheme = 'dark';
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ====================================================================
+       TOP NAVIGATION BAR
+       ==================================================================== -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="#hero" class="brand-link" aria-label="Home">
+        <span class="brand-monogram">JIS</span>
+      </a>
+
+      <!-- Desktop & Mobile Controls -->
+      <div class="nav-controls">
+        <!-- Desktop Navigation Menu -->
+        <nav>
+          <ul class="nav-menu">
+            <li><a href="#video-intro" class="nav-link">Intro Video</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#achievements" class="nav-link">Achievements</a></li>
+            <li><a href="#hackathon" class="nav-link">Hackathon</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+            <!-- ==============================================================
+                 [REPLACEABLE] RESUME / CV LINK
+                 ============================================================== -->
+            <li>
+              <a href="resume.html" target="_blank" rel="noopener noreferrer" class="nav-resume-link" title="Open Resume">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+                <span>Resume</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Theme Toggle Button (Dark Default & High-Contrast Light) -->
+        <button class="theme-toggle-btn" id="themeToggleBtn" type="button" aria-label="Switch to light theme" title="Toggle theme (Dark / High-Contrast Light)">
+          <!-- Sun icon (visible in dark theme) -->
+          <svg class="theme-icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <!-- Moon icon (visible in light theme) -->
+          <svg class="theme-icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- Mobile Nav Toggle Button -->
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container animate-entrance">
+
+    <!-- ====================================================================
+         1. HERO SECTION (Compact, High-Impact & Direct — Matching Reference)
+         ==================================================================== -->
+    <section id="hero" class="hero-section">
+      <div class="hero-layout">
+        
+        <div class="hero-text">
+          <!-- Name with Modern High-Impact Display Style -->
+          <h1 class="hero-name">Jahidul Islam Sium</h1>
+
+          <!-- 2 Compact & Important Words Tagline (Like Reference Portfolio) -->
+          <p class="hero-tagline">
+            <span class="tagline-prefix">CSE Undergraduate</span>
+            <span class="tagline-separator"> · </span>
+            <span class="type-wrap">
+              <span class="typed-text" id="typedText">Competitive Programmer</span>
+              <span class="cursor">|</span>
+            </span>
+          </p>
+
+          <!-- Inspiring Quote / Motto (Requested by User) -->
+          <p class="hero-quote">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="quote-icon" aria-hidden="true">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+            <span>&ldquo;The best way to predict the future is to invent it.&rdquo;</span>
+          </p>
+
+          <div class="hero-actions">
+            <a href="#about" class="btn btn-primary">
+              <span>About Me</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+
+            <a href="#projects" class="btn btn-secondary">
+              <span>View Projects</span>
+            </a>
+
+            <!-- Resume / CV Option -->
+            <a href="resume.html" target="_blank" rel="noopener noreferrer" class="btn btn-resume">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+              </svg>
+              <span>Resume / CV</span>
+            </a>
+          </div>
+
+          <!-- Hero Quick Social Profiles -->
+          <div class="hero-socials">
+            <a href="https://github.com/Sium856" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="GitHub Profile" title="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/jahidul-islam-sium-5b804335a/" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="LinkedIn Profile" title="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <a href="https://codeforces.com/profile/cmByte" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="Codeforces Profile" title="Codeforces">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+                <line x1="12" y1="20" x2="12" y2="9"></line>
+              </svg>
+            </a>
+            <a href="https://leetcode.com/u/Sium856/" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="LeetCode Profile" title="LeetCode">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="4 17 10 11 4 5"></polyline>
+                <line x1="12" y1="19" x2="20" y2="19"></line>
+              </svg>
+            </a>
+            <a href="mailto:jahidulislamsium02@gmail.com" class="social-circle-btn" aria-label="Email Jahidul" title="Email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Profile Photo with Reference-Style Orbiting Rings & Clean Photo Frame -->
+        <div class="profile-photo-wrapper">
+          <div class="profile-ring-outer">
+            <!-- Inner Glowing Photo Container with Direct Photo Drop & Upload -->
+            <div class="profile-ring-inner" id="profileDropZone" title="Click to upload or drag &amp; drop your photo">
+              <img 
+                id="profile-img"
+                src="./profile-placeholder.svg" 
+                alt="Jahidul Islam Sium" 
+                class="profile-photo"
+                onerror="this.onerror=null; this.src='./profile-placeholder.svg';"
+              />
+              <!-- Interactive Hover / Click Overlay to Upload Real Picture -->
+              <label for="avatarFileInput" class="photo-upload-overlay" title="Upload your real photo">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                  <circle cx="12" cy="13" r="4"></circle>
+                </svg>
+                <span class="upload-overlay-text">Upload Photo</span>
+              </label>
+              <input type="file" id="avatarFileInput" accept="image/*" class="visually-hidden" />
+            </div>
+
+            <!-- Orbit 1: C++ -->
+            <div class="ring-orbit orbit-1">
+              <div class="orbit-dot dot-cpp" title="C++ &amp; Competitive Programming">C++</div>
+            </div>
+
+            <!-- Orbit 2: AI -->
+            <div class="ring-orbit orbit-2">
+              <div class="orbit-dot dot-ai" title="AI Ethics &amp; Research">AI</div>
+            </div>
+
+            <!-- Orbit 3: Problem Solving / Algorithms -->
+            <div class="ring-orbit orbit-3">
+              <div class="orbit-dot dot-algo" title="Algorithms &amp; Problem Solving">&lt;/&gt;</div>
+            </div>
+          </div>
+          <!-- Quick button below avatar to add / change real photo -->
+          <div class="photo-hint-badge">
+            <label for="avatarFileInput" class="photo-hint-btn" title="Select your photo file from your computer">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                <circle cx="12" cy="13" r="4"></circle>
+              </svg>
+              <span>Add / Change Photo</span>
+            </label>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- ====================================================================
+         2. VIDEO INTRODUCTION SECTION (Right after 1st Page / Hero)
+         ==================================================================== -->
+    <section id="video-intro" class="section">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="section-title-mark"></span>
+          Video Introduction
+        </h2>
+        <span class="section-caption">// personal pitch &amp; vision</span>
+      </div>
+
+      <!-- ================================================================
+           [REPLACEABLE] VIDEO EMBED / PLAYER INSTRUCTIONS
+           When you record your video, you can replace the placeholder below with:
+           Option A (YouTube / Vimeo embed):
+             <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+               <iframe src="https://www.youtube.com/embed/YOUR_ID" style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;" allowfullscreen></iframe>
+             </div>
+           Option B (Direct MP4 video file in project folder):
+             <video controls style="width:100%; border-radius:8px;" poster="video-thumbnail.jpg">
+               <source src="intro-video.mp4" type="video/mp4" />
+             </video>
+           ================================================================ -->
+      <div class="video-card">
+        <div class="video-player-frame">
+          <div class="coming-soon-badge">
+            <span class="coming-soon-dot"></span>
+            <span>Coming Soon</span>
+          </div>
+
+          <div class="video-play-indicator" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+          </div>
+
+          <h3 class="video-frame-title">Personal Introduction Video</h3>
+          <p class="video-frame-desc">
+            A concise introduction covering my problem-solving journey, competitive programming highlights, academic milestones at DIU, and my vision in AI Ethics &amp; Engineering will be available here soon.
+          </p>
+
+          <div class="video-helper-note">
+            <code>[Place your intro-video.mp4 or embed YouTube link here]</code>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- ====================================================================
+         2. ABOUT SECTION (Problem Solving & Research Mindset, Ambition)
+         ==================================================================== -->
+    <section id="about" class="section">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="section-title-mark"></span>
+          About Me
+        </h2>
+        <span class="section-caption">// mindset &amp; ambition</span>
+      </div>
+
+      <div class="about-card">
+        <!-- Main About Paragraph (User's Exact Mindset & Ambition) -->
+        <p class="about-text">
+          I'm a <strong>Computer Science &amp; Engineering</strong> student at <strong>Daffodil International University (DIU)</strong>, driven by a <strong>problem-solving and research mindset</strong>. I sharpen my analytical skills on <strong>Codeforces</strong>, <strong>LeetCode</strong>, and <strong>BeeCrowd</strong>, mastering <strong>Data Structures</strong>, <strong>Algorithms</strong>, and <strong>Object-Oriented Design</strong> through disciplined practice and hands-on experimentation.
+        </p>
+        <p class="about-text">
+          My long-term ambition is to contribute meaningfully to my nation's IT growth and work as a <strong>researcher in AI ethics</strong> &mdash; building equitable, transparent, and ethically grounded intelligent systems that address complex societal challenges.
+        </p>
+
+        <!-- 3 Focus Pillars -->
+        <div class="about-pillars">
+          <div class="pillar-item">
+            <span class="pillar-label">Research Mindset</span>
+            <span class="pillar-desc">Rooted in mathematical curiosity, algorithmic correctness, and systematic analysis.</span>
+          </div>
+          <div class="pillar-item">
+            <span class="pillar-label">National IT Vision</span>
+            <span class="pillar-desc">Dedicated to pioneering technological self-reliance and driving Bangladesh's digital evolution.</span>
+          </div>
+          <div class="pillar-item">
+            <span class="pillar-label">AI Ethics &amp; Systems</span>
+            <span class="pillar-desc">Aspiring AI researcher focused on alignment, fairness, and reliable agentic intelligence.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- ====================================================================
+         3. SKILLS SECTION (Updated Tools & Environments)
+         ==================================================================== -->
+    <section id="skills" class="section">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="section-title-mark"></span>
+          Technical Skills
+        </h2>
+        <span class="section-caption">// tools &amp; competencies</span>
+      </div>
+
+      <div class="skills-grid">
+
+        <!-- Languages -->
+        <div class="skill-category-card">
+          <div class="skill-category-header">
+            <span class="skill-category-title">
+              <span class="skill-category-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </span>
+              Languages
+            </span>
+            <span class="section-caption">Core Syntax</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-pill">C</span>
+            <span class="skill-pill">C++</span>
+            <span class="skill-pill">Python <span class="skill-pill-status">(basic)</span></span>
+            <span class="skill-pill">Java <span class="skill-pill-status">(learning)</span></span>
+          </div>
+        </div>
+
+        <!-- Core CS -->
+        <div class="skill-category-card">
+          <div class="skill-category-header">
+            <span class="skill-category-title">
+              <span class="skill-category-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                  <rect x="9" y="9" width="6" height="6"></rect>
+                  <line x1="9" y1="1" x2="9" y2="4"></line>
+                  <line x1="15" y1="1" x2="15" y2="4"></line>
+                  <line x1="9" y1="20" x2="9" y2="23"></line>
+                  <line x1="15" y1="20" x2="15" y2="23"></line>
+                  <line x1="20" y1="9" x2="23" y2="9"></line>
+                  <line x1="20" y1="14" x2="23" y2="14"></line>
+                  <line x1="1" y1="9" x2="4" y2="9"></line>
+                  <line x1="1" y1="14" x2="4" y2="14"></line>
+                </svg>
+              </span>
+              Core Computer Science
+            </span>
+            <span class="section-caption">Theory &amp; Paradigms</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-pill">Data Structures</span>
+            <span class="skill-pill">Algorithms</span>
+            <span class="skill-pill">Object-Oriented Programming (OOP)</span>
+            <span class="skill-pill">Discrete Mathematics</span>
+          </div>
+        </div>
+
+        <!-- Competitive Programming -->
+        <div class="skill-category-card">
+          <div class="skill-category-header">
+            <span class="skill-category-title">
+              <span class="skill-category-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="8" r="7"></circle>
+                  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                </svg>
+              </span>
+              Competitive Programming
+            </span>
+            <span class="section-caption">Problem Solving</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-pill">Greedy Algorithms</span>
+            <span class="skill-pill">Dynamic Programming (DP)</span>
+            <span class="skill-pill">BFS / DFS Traversals</span>
+            <span class="skill-pill">Sorting &amp; Searching</span>
+            <span class="skill-pill">Graph Theory</span>
+            <span class="skill-pill">Complexity Analysis</span>
+          </div>
+        </div>
+
+        <!-- Web & Backend -->
+        <div class="skill-category-card">
+          <div class="skill-category-header">
+            <span class="skill-category-title">
+              <span class="skill-category-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+              </span>
+              Web &amp; Backend
+            </span>
+            <span class="section-caption">Full Stack &amp; Cloud</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-pill">HTML5</span>
+            <span class="skill-pill">CSS3</span>
+            <span class="skill-pill">JavaScript</span>
+            <span class="skill-pill">Firebase Auth</span>
+            <span class="skill-pill">Cloud Firestore</span>
+          </div>
+        </div>
+
+        <!-- Tools & Environments (Updated with VS Code, PyCharm, Code::Blocks) -->
+        <div class="skill-category-card">
+          <div class="skill-category-header">
+            <span class="skill-category-title">
+              <span class="skill-category-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                </svg>
+              </span>
+              Tools &amp; Environments
+            </span>
+            <span class="section-caption">IDEs &amp; Workflow</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-pill">VS Code</span>
+            <span class="skill-pill">PyCharm</span>
+            <span class="skill-pill">Code::Blocks</span>
+            <span class="skill-pill">Git</span>
+            <span class="skill-pill">GitHub</span>
+            <span class="skill-pill">Netlify</span>
+            <span class="skill-pill">Google AI Studio</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- ====================================================================
+         4. PROJECTS SECTION (Selected Top 3 Projects)
+         ==================================================================== -->
+    <section id="projects" class="section">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="section-title-mark"></span>
+          Selected Projects
+        </h2>
+        <span class="section-caption">// 4 core builds</span>
+      </div>
+
+      <div class="projects-list">
+
+        <!-- Project 1: Baitul Mal -->
+        <article class="project-card">
+          <div class="project-top">
+            <div class="project-title-group">
+              <div class="project-category">System Utility &amp; Accounting</div>
+              <h3 class="project-title">Baitul Mal</h3>
+            </div>
+            <div class="project-badges">
+              <span class="badge-pill">C Console App</span>
+              <span class="badge-pill">CLI Tool</span>
+            </div>
+          </div>
+
+          <p class="project-desc">
+            A C console application engineered for shared student-mess and roommate expense management, eliminating calculation discrepancies with automated settlement logic.
+          </p>
+
+          <ul class="project-highlights">
+            <li>Individual member contribution tracking with dynamic balance tallying and meal-rate computations.</li>
+            <li>Greedy debt minimization algorithm to determine the fewest transactions required to settle balances among all members.</li>
+            <li>Interactive menu-driven terminal interface with robust input validation and formatted tabular reporting.</li>
+          </ul>
+
+          <div class="project-footer">
+            <div class="project-tech-stack">
+              <span class="tech-tag">#C</span>
+              <span class="tech-tag">#Data-Structures</span>
+              <span class="tech-tag">#Algorithms</span>
+              <span class="tech-tag">#Console-App</span>
+            </div>
+            <div class="project-links">
+              <!-- ========================================================
+                   [REPLACEABLE] Baitul Mal URLs: Paste your real links below
+                   ======================================================== -->
+              <a href="https://github.com/Sium856" target="_blank" rel="noopener noreferrer" class="project-link-btn" title="View Source Code">
+                <span>Source Code</span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: Huffman Coding Tool -->
+        <article class="project-card">
+          <div class="project-top">
+            <div class="project-title-group">
+              <div class="project-category">Algorithm Implementation</div>
+              <h3 class="project-title">Huffman Coding Tool</h3>
+            </div>
+            <div class="project-badges">
+              <span class="badge-pill">C Program</span>
+              <span class="badge-pill">Information Theory</span>
+            </div>
+          </div>
+
+          <p class="project-desc">
+            A menu-driven C program for lossless text compression implementing the classic Huffman algorithm, visualizing character frequencies and binary prefix trees.
+          </p>
+
+          <ul class="project-highlights">
+            <li>Builds min-heap priority queues to construct optimal binary prefix trees for variable-length entropy coding.</li>
+            <li>Displays full frequency analysis, generated binary code dictionary, encoded bitstream, and exact compression ratios.</li>
+            <li>Provides decoding verification confirming bit-level integrity and zero data loss on decompression.</li>
+          </ul>
+
+          <div class="project-footer">
+            <div class="project-tech-stack">
+              <span class="tech-tag">#C</span>
+              <span class="tech-tag">#Huffman-Algorithm</span>
+              <span class="tech-tag">#Binary-Trees</span>
+              <span class="tech-tag">#Compression</span>
+            </div>
+            <div class="project-links">
+              <!-- ========================================================
+                   [REPLACEABLE] Huffman Tool URLs: Paste your real links below
+                   ======================================================== -->
+              <a href="https://github.com/Sium856" target="_blank" rel="noopener noreferrer" class="project-link-btn" title="View Source Code">
+                <span>Source Code</span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: Apple Archery Game (Game 1) -->
+        <article class="project-card">
+          <div class="project-top">
+            <div class="project-title-group">
+              <div class="project-category">2D Physics Web Game</div>
+              <h3 class="project-title">Apple Archery Game</h3>
+            </div>
+            <div class="project-badges">
+              <span class="badge-pill badge-live">Live on Netlify</span>
+              <span class="badge-pill">Google AI Studio</span>
+            </div>
+          </div>
+
+          <p class="project-desc">
+            An engaging 2D archery physics game conceptualized and built with Google AI Studio and pure JavaScript, featuring realistic parabolic projectile trajectories, wind resistance calculations, dynamic target positioning, and responsive touch controls.
+          </p>
+
+          <ul class="project-highlights">
+            <li>Engineered 2D ballistic physics simulation accounting for gravity vectors, arrow velocity, release angles, and pinpoint hit detection.</li>
+            <li>Implemented intuitive aim-and-release mechanics with visual trajectory hints and dynamic power meters for desktop and mobile.</li>
+            <li>Structured 60 FPS requestAnimationFrame rendering loop with procedural target animations, sound effects, and progressive difficulty stages.</li>
+          </ul>
+
+          <div class="project-footer">
+            <div class="project-tech-stack">
+              <span class="tech-tag">#JavaScript</span>
+              <span class="tech-tag">#HTML5-Canvas</span>
+              <span class="tech-tag">#Physics-Simulation</span>
+              <span class="tech-tag">#Google-AI-Studio</span>
+              <span class="tech-tag">#Netlify</span>
+              <span class="tech-tag">#Game-Design</span>
+            </div>
+            <div class="project-links">
+              <!-- ========================================================
+                   [REPLACEABLE] Apple Archery Game URLs: Paste your real links below
+                   ======================================================== -->
+              <a href="https://github.com/Sium856" target="_blank" rel="noopener noreferrer" class="project-link-btn primary" title="Play Apple Archery Game Live">
+                <span>Play Live</span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+              <a href="https://github.com/Sium856" target="_blank" rel="noopener noreferrer" class="project-link-btn" title="View Source Code">
+                <span>Source Code</span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4: Math Pop (Game 2) -->
+        <article class="project-card">
+          <div class="project-top">
+            <div class="project-title-group">
+              <div class="project-category">Educational Arcade Game</div>
+              <h3 class="project-title">Math Pop</h3>
+            </div>
+            <div class="project-badges">
+              <span class="badge-pill badge-live">Live on Netlify</span>
+              <span class="badge-pill">Google AI Studio</span>
+            </div>
+          </div>
+
+          <p class="project-desc">
+            A fast-paced mental arithmetic arcade puzzle game created with Google AI Studio, challenging players to solve mathematical equations and pop corresponding numbered bubbles under intensifying countdown timers.
+          </p>
+
+          <ul class="project-highlights">
+            <li>Designed algorithmic equation generator delivering adaptive difficulty tiers across addition, subtraction, multiplication, and factor matching.</li>
+            <li>Crafted dynamic particle bursting animations, combo streak multipliers, and instant audio-visual feedback loops.</li>
+            <li>Lightweight zero-dependency architecture deployed on Netlify with local high-score tracking and seamless cross-platform responsiveness.</li>
+          </ul>
+
+          <div class="project-footer">
+            <div class="project-tech-stack">
+              <span class="tech-tag">#JavaScript</span>
+              <span class="tech-tag">#Mental-Math</span>
+              <span class="tech-tag">#Google-AI-Studio</span>
+              <span class="tech-tag">#Netlify</span>
+              <span class="tech-tag">#Arcade-Game</span>
+            </div>
+            <div class="project-links">
+              <!-- ========================================================
+                   [REPLACEABLE] Math Pop URLs: Paste your real links below
+                   ======================================================== -->
+              <a href="https://github.com/Sium856" target="_blank" rel="noopener noreferrer" class="project-link-btn primary" title="Play Math Pop Live">
+                <span>Play Live</span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+              <a href="https://github.com/Sium856" target="_blank" rel="noopener noreferrer" class="project-link-btn" title="View Source Code">
+                <span>Source Code</span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- ====================================================================
+         5. ACHIEVEMENTS SECTION (With Certificate Slots Kept Aside)
+         ==================================================================== -->
+    <section id="achievements" class="section">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="section-title-mark"></span>
+          Honors &amp; Achievements
+        </h2>
+        <span class="section-caption">// academic &amp; certificates</span>
+      </div>
+
+      <div class="achievements-list">
+
+        <!-- Dean's List Award -->
+        <div class="achievement-card highlight">
+          <div class="achievement-main">
+            <div class="achievement-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="8" r="7"></circle>
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+              </svg>
+            </div>
+            <div class="achievement-content">
+              <h3 class="achievement-title">Dean's List Award</h3>
+              <p class="achievement-sub">Conferred for outstanding academic performance and scholarly discipline at Daffodil International University.</p>
+              <div class="achievement-meta">Summer 2025 • Daffodil International University</div>
+            </div>
+          </div>
+
+          <!-- ASIDE: Certificate Slot -->
+          <!-- ==============================================================
+               [REPLACEABLE] CERTIFICATE LINK:
+               Paste your certificate PDF or image link in href="" below
+               (e.g., href="certificates/deans-list.pdf")
+               ============================================================== -->
+          <div class="achievement-aside">
+            <a href="#" class="certificate-slot" title="Click to view or replace with certificate URL">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="12" y1="11" x2="12" y2="15"></line>
+                <line x1="10" y1="13" x2="14" y2="13"></line>
+              </svg>
+              <span>+ Add Certificate</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Math Olympiad Finalist -->
+        <div class="achievement-card">
+          <div class="achievement-main">
+            <div class="achievement-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+            </div>
+            <div class="achievement-content">
+              <h3 class="achievement-title">Finalist: Math Olympiad</h3>
+              <p class="achievement-sub">University-level competition evaluating analytical problem-solving, discrete logic, and combinatorics.</p>
+              <div class="achievement-meta">University Level Finalist</div>
+            </div>
+          </div>
+
+          <!-- ASIDE: Certificate Slot -->
+          <!-- ==============================================================
+               [REPLACEABLE] CERTIFICATE LINK:
+               Paste your certificate PDF or image link in href="" below
+               ============================================================== -->
+          <div class="achievement-aside">
+            <a href="#" class="certificate-slot" title="Click to view or replace with certificate URL">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="12" y1="11" x2="12" y2="15"></line>
+                <line x1="10" y1="13" x2="14" y2="13"></line>
+              </svg>
+              <span>+ Add Certificate</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Takeoff Finalist -->
+        <div class="achievement-card">
+          <div class="achievement-main">
+            <div class="achievement-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </div>
+            <div class="achievement-content">
+              <h3 class="achievement-title">Finalist: Takeoff Programming Contest</h3>
+              <p class="achievement-sub">Competitive programming tournament measuring algorithmic implementation, speed, and clean code under strict time constraints.</p>
+              <div class="achievement-meta">University Level Finalist</div>
+            </div>
+          </div>
+
+          <!-- ASIDE: Certificate Slot -->
+          <!-- ==============================================================
+               [REPLACEABLE] CERTIFICATE LINK:
+               Paste your certificate PDF or image link in href="" below
+               ============================================================== -->
+          <div class="achievement-aside">
+            <a href="#" class="certificate-slot" title="Click to view or replace with certificate URL">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="12" y1="11" x2="12" y2="15"></line>
+                <line x1="10" y1="13" x2="14" y2="13"></line>
+              </svg>
+              <span>+ Add Certificate</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- UTA Finalist -->
+        <div class="achievement-card">
+          <div class="achievement-main">
+            <div class="achievement-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                <path d="M4 22h16"></path>
+                <path d="M10 14.66V17c0 .55-.45 1-1 1H7v4h10v-4h-2c-.55 0-1-.45-1-1v-2.34"></path>
+                <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+              </svg>
+            </div>
+            <div class="achievement-content">
+              <h3 class="achievement-title">Finalist: UTA (University Talent Arena)</h3>
+              <p class="achievement-sub">University-wide tech arena spotlighting high-potential undergraduates across problem-solving and software development.</p>
+              <div class="achievement-meta">University Level Finalist</div>
+            </div>
+          </div>
+
+          <!-- ASIDE: Certificate Slot -->
+          <!-- ==============================================================
+               [REPLACEABLE] CERTIFICATE LINK:
+               Paste your certificate PDF or image link in href="" below
+               ============================================================== -->
+          <div class="achievement-aside">
+            <a href="#" class="certificate-slot" title="Click to view or replace with certificate URL">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="12" y1="11" x2="12" y2="15"></line>
+                <line x1="10" y1="13" x2="14" y2="13"></line>
+              </svg>
+              <span>+ Add Certificate</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- ====================================================================
+         6. HACKATHON SECTION
+         ==================================================================== -->
+    <section id="hackathon" class="section">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="section-title-mark"></span>
+          Hackathon Experience
+        </h2>
+        <span class="section-caption">// team collaboration</span>
+      </div>
+
+      <div class="hackathon-card">
+        <div class="hackathon-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
+          BUP AI Hackathon
+        </div>
+
+        <div class="hackathon-header">
+          <h3 class="hackathon-title">EnerGrid — Energy Optimization Project</h3>
+          <p class="hackathon-sub">4-Member Collaborative Team • Inaugural Hackathon Journey</p>
+        </div>
+
+        <p class="about-text">
+          Participated in the competitive <strong>BUP AI Hackathon</strong> where our 4-person team conceived and developed <strong>EnerGrid</strong> — a smart energy management and optimization initiative designed to reduce peak-load waste through predictive resource allocation.
+        </p>
+
+        <div class="hackathon-details">
+          <div class="hackathon-detail-block">
+            <h4>My Contributions</h4>
+            <p>Led early-stage ideation discussions and engineered the frontend presentation interface, ensuring clean data visualization and seamless demonstration flow for the evaluation panel.</p>
+          </div>
+          <div class="hackathon-detail-block">
+            <h4>Key Takeaways</h4>
+            <p>Deepened skills in high-velocity agile collaboration, rapid feature prioritization, cross-disciplinary communication under sprint deadlines, and pitching technical solutions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <hr class="section-divider" />
+
+    <!-- ====================================================================
+         8. CONTACT SECTION (With User's Real Links)
+         ==================================================================== -->
+    <section id="contact" class="section">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="section-title-mark"></span>
+          Connect &amp; Profiles
+        </h2>
+        <span class="section-caption">// open channels</span>
+      </div>
+
+      <p class="contact-intro">
+        Whether you are discussing competitive programming strategies, exploring AI research collaborations, or discussing internships, feel free to reach out.
+      </p>
+
+      <div class="contact-grid">
+
+        <!-- 1. Email -->
+        <div class="contact-item-card">
+          <div class="contact-item-top">
+            <div class="contact-item-icon">
+              <!-- Envelope Icon -->
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div class="contact-item-info">
+              <div class="contact-platform-name">Email</div>
+              <div class="contact-placeholder-desc">jahidulislamsium02@gmail.com</div>
+            </div>
+          </div>
+          <a href="mailto:jahidulislamsium02@gmail.com" class="contact-item-action" data-copy-email="jahidulislamsium02@gmail.com" title="Send email or click to copy">
+            <span>Send Email / Copy</span>
+            <span class="contact-action-arrow">&rarr;</span>
+          </a>
+        </div>
+
+        <!-- 2. GitHub -->
+        <div class="contact-item-card">
+          <div class="contact-item-top">
+            <div class="contact-item-icon">
+              <!-- GitHub Octocat Icon -->
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+            </div>
+            <div class="contact-item-info">
+              <div class="contact-platform-name">GitHub</div>
+              <div class="contact-placeholder-desc">github.com/Sium856</div>
+            </div>
+          </div>
+          <a href="https://github.com/Sium856" target="_blank" rel="noopener noreferrer" class="contact-item-action" title="Visit GitHub profile">
+            <span>Open Profile</span>
+            <span class="contact-action-arrow">&rarr;</span>
+          </a>
+        </div>
+
+        <!-- 3. LinkedIn -->
+        <div class="contact-item-card">
+          <div class="contact-item-top">
+            <div class="contact-item-icon">
+              <!-- LinkedIn Icon -->
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </div>
+            <div class="contact-item-info">
+              <div class="contact-platform-name">LinkedIn</div>
+              <div class="contact-placeholder-desc">linkedin.com/in/jahidul-islam-sium</div>
+            </div>
+          </div>
+          <a href="https://www.linkedin.com/in/jahidul-islam-sium-5b804335a/" target="_blank" rel="noopener noreferrer" class="contact-item-action" title="Visit LinkedIn profile">
+            <span>Open Profile</span>
+            <span class="contact-action-arrow">&rarr;</span>
+          </a>
+        </div>
+
+        <!-- 4. Codeforces -->
+        <div class="contact-item-card">
+          <div class="contact-item-top">
+            <div class="contact-item-icon">
+              <!-- Codeforces Bar Chart Icon -->
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+                <line x1="12" y1="20" x2="12" y2="9"></line>
+              </svg>
+            </div>
+            <div class="contact-item-info">
+              <div class="contact-platform-name">Codeforces</div>
+              <div class="contact-placeholder-desc">codeforces.com/profile/cmByte</div>
+            </div>
+          </div>
+          <a href="https://codeforces.com/profile/cmByte" target="_blank" rel="noopener noreferrer" class="contact-item-action" title="Visit Codeforces profile">
+            <span>Open Profile</span>
+            <span class="contact-action-arrow">&rarr;</span>
+          </a>
+        </div>
+
+        <!-- 5. LeetCode -->
+        <div class="contact-item-card">
+          <div class="contact-item-top">
+            <div class="contact-item-icon">
+              <!-- LeetCode Terminal/Bracket Icon -->
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="4 17 10 11 4 5"></polyline>
+                <line x1="12" y1="19" x2="20" y2="19"></line>
+              </svg>
+            </div>
+            <div class="contact-item-info">
+              <div class="contact-platform-name">LeetCode</div>
+              <div class="contact-placeholder-desc">leetcode.com/u/Sium856</div>
+            </div>
+          </div>
+          <a href="https://leetcode.com/u/Sium856/" target="_blank" rel="noopener noreferrer" class="contact-item-action" title="Visit LeetCode profile">
+            <span>Open Profile</span>
+            <span class="contact-action-arrow">&rarr;</span>
+          </a>
+        </div>
+
+        <!-- 6. BeeCrowd -->
+        <div class="contact-item-card">
+          <div class="contact-item-top">
+            <div class="contact-item-icon">
+              <!-- BeeCrowd / Judge Hexagon Icon -->
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2l8 4.5v9L12 20l-8-4.5v-9L12 2z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </div>
+            <div class="contact-item-info">
+              <div class="contact-platform-name">BeeCrowd</div>
+              <div class="contact-placeholder-desc">judge.beecrowd.com</div>
+            </div>
+          </div>
+          <a href="https://judge.beecrowd.com/en/users/basic-info" target="_blank" rel="noopener noreferrer" class="contact-item-action" title="Visit BeeCrowd profile">
+            <span>Open Profile</span>
+            <span class="contact-action-arrow">&rarr;</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====================================================================
+       SITE FOOTER
+       ==================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>
+        <div class="footer-meta">
+          Designed &amp; Developed for <strong>Jahidul Islam Sium</strong>
+        </div>
+        <div class="footer-note">
+          Zero-framework HTML/CSS/JS • Ready for direct Netlify &amp; Vercel static deployment
+        </div>
+      </div>
+      <a href="#hero" class="footer-back-to-top">
+        <span>Back to top</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Copy Notification Toast -->
+  <div id="copy-toast" class="copy-toast" role="status" aria-live="polite">
+    <span class="copy-toast-check">&#10003;</span>
+    <span class="copy-toast-text">Email copied to clipboard!</span>
+  </div>
+
+  <!-- Vanilla Client Script -->
+  <script src="./script.js"></script>
+</body>
+</html>
