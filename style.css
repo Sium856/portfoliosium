@@ -1763,26 +1763,26 @@ a {
     margin: 2.5rem 0;
   }
 }
-.skills-sections-wrapper {
+.skills-two-column-layout {
   max-width: 950px;
   margin: 0 auto;
 }
 
-.skill-category-block {
+.skills-master-section {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.6rem;
 }
 
 .skills-group-label {
   color: #F5E6B8;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.8px;
 }
 
-.category-content-row {
+.section-flex-box {
   display: flex;
   gap: 2rem;
   align-items: flex-start;
@@ -1857,8 +1857,9 @@ a {
   border: 1px solid rgba(245, 230, 184, 0.15);
   border-radius: 16px;
   padding: 1.75rem;
-  min-height: 200px;
-  position: relative;
+  min-height: 220px;
+  position: sticky;
+  top: 2rem;
   overflow: hidden;
   box-shadow: 0 15px 35px rgba(0,0,0,0.25);
 }
