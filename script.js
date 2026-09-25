@@ -344,13 +344,3 @@ function applyTheme(theme) {
     }
   }
 }
-function openSkill(evt, skillId) {
-  const panels = document.querySelectorAll('.skill-panel-content');
-  panels.forEach(panel => panel.classList.remove('active'));
-
-  const tabs = document.querySelectorAll('.skill-tab');
-  tabs.forEach(tab => tab.classList.remove('active'));
-
-  document.getElementById(skillId).classList.add('active');
-  evt.currentTarget.classList.add('active');
-}
