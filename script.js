@@ -301,46 +301,22 @@ function initTypedText() {
   setTimeout(typeTick, delay);
 }
 
-/**
- * 8. Theme Toggle (Dark Default with High-Contrast Light Mode)
- */
-function initThemeToggle() {
-  const themeToggleBtn = document.getElementById('themeToggleBtn');
-  const storedTheme = localStorage.getItem('jis_theme');
+function previewSkill(skillId) {
+  // Hide all preview cards
+  const cards = document.querySelectorAll('.preview-card-box');
+  cards.forEach(card => card.classList.remove('active'));
 
-  // Default to dark theme unless user explicitly chose light
-  const currentTheme = storedTheme === 'light' ? 'light' : 'dark';
-  applyTheme(currentTheme);
+  // Remove active class from all rows
+  const rows = document.querySelectorAll('.skill-row-item');
+  rows.hooks?.forEach?.(r => r.classList.remove('active'));
+  rows.forEach(row => row.classList.remove('active'));
 
-  if (!themeToggleBtn) return;
-
-  themeToggleBtn.addEventListener('click', () => {
-    const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
-    const nextTheme = isDark ? 'light' : 'dark';
-    applyTheme(nextTheme);
-    try {
-      localStorage.setItem('jis_theme', nextTheme);
-    } catch (e) {
-      console.warn('Unable to persist theme to localStorage', e);
-    }
-  });
-}
-
-function applyTheme(theme) {
-  const btn = document.getElementById('themeToggleBtn');
-  if (theme === 'light') {
-    document.documentElement.setAttribute('data-theme', 'light');
-    document.documentElement.style.colorScheme = 'light';
-    if (btn) {
-      btn.setAttribute('aria-label', 'Switch to dark theme');
-      btn.setAttribute('title', 'Switch to dark theme');
-    }
-  } else {
-    document.documentElement.removeAttribute('data-theme');
-    document.documentElement.style.colorScheme = 'dark';
-    if (btn) {
-      btn.setAttribute('aria-label', 'Switch to light theme');
-      btn.setAttribute('title', 'Switch to high-contrast light theme');
-    }
+  // Show target preview card
+  const targetCard = document.getElementById(skillId);
+  if (targetCard) {
+    targetCard.classList.add('active');
   }
+
+  // Highlight hovered row item
+  event?.currentTarget?.classList?.add('active');
 }
