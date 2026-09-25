@@ -1763,31 +1763,14 @@ a {
     margin: 2.5rem 0;
   }
 }
-/* Technical Skills Section Layout */
-.skills-section-wrapper {
-  display: flex;
-  gap: 2.5rem;
-  max-width: 950px;
+.skills-container-grid {
+  max-width: 800px;
   margin: 0 auto;
-  align-items: stretch;
 }
 
-/* Left Menu Style */
-.skills-menu {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-}
-
-.skills-category-title {
-  color: #F5E6B8;
-  font-size: 1rem;
-  font-weight: 600;
-  margin-top: 0.5rem;
-  margin-bottom: 0.3rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+.skill-item-wrapper {
+  position: relative;
+  margin-bottom: 0.75rem;
 }
 
 .skill-tab {
@@ -1802,7 +1785,7 @@ a {
   transition: all 0.3s ease;
   color: #FFFFFF;
   font-weight: 500;
-  font-size: 0.95rem;
+  width: 280px;
 }
 
 .skill-logo {
@@ -1811,53 +1794,35 @@ a {
   object-fit: contain;
 }
 
-.skill-tab:hover, .skill-tab.active {
+.skill-tab:hover {
   background: rgba(245, 230, 184, 0.1);
   border-color: #F5E6B8;
-  transform: translateX(6px);
 }
 
-/* Right Display Panel Style */
-.skills-display-panel {
-  flex: 1.5;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 14px;
-  padding: 2rem;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-}
-
-.skill-panel-content {
+/* Right Side Popup/Inline Details jo hover korle asbe */
+.inline-detail-popup {
   display: none;
-  opacity: 0;
-  transform: translateY(15px);
-  transition: all 0.4s ease-in-out;
-  width: 100%;
-}
-
-.skill-panel-content.active {
-  display: block;
-  animation: panelFadeIn 0.4s forwards;
-}
-
-.skill-panel-content h3 {
-  color: #F5E6B8;
-  margin-bottom: 0.75rem;
-  font-size: 1.4rem;
-}
-
-.skill-panel-content p {
+  position: absolute;
+  left: 300px;
+  top: 0;
+  width: 350px;
+  background: rgba(18, 18, 18, 0.95);
+  border: 1px solid #F5E6B8;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
   color: #CCCCCC;
-  line-height: 1.6;
-  font-size: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  z-index: 100;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s ease;
 }
 
-@keyframes panelFadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Hover korle popup show korbe */
+.skill-item-wrapper:hover .inline-detail-popup {
+  display: block;
+  opacity: 1;
+  transform: translateX(0);
 }
