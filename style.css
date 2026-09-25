@@ -1763,66 +1763,157 @@ a {
     margin: 2.5rem 0;
   }
 }
-.skills-container-grid {
-  max-width: 800px;
+.skills-master-container {
+  display: flex;
+  gap: 2rem;
+  max-width: 950px;
   margin: 0 auto;
+  align-items: flex-start;
 }
 
-.skill-item-wrapper {
-  position: relative;
-  margin-bottom: 0.75rem;
+.skills-list-pane {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.skill-tab {
+.skills-group-label {
+  color: #F5E6B8;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 0.2rem;
+}
+
+.skill-row-item {
   display: flex;
   align-items: center;
-  gap: 0.85rem;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 0.8rem 1.1rem;
-  border-radius: 10px;
+  gap: 0.9rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skill-icon-wrap {
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.s-ico {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  stroke: #F5E6B8;
+}
+
+.skill-row-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.s-name {
   color: #FFFFFF;
   font-weight: 500;
-  width: 280px;
-}
-
-.skill-logo {
-  width: 22px;
-  height: 22px;
-  object-fit: contain;
-}
-
-.skill-tab:hover {
-  background: rgba(245, 230, 184, 0.1);
-  border-color: #F5E6B8;
-}
-
-/* Right Side Popup/Inline Details jo hover korle asbe */
-.inline-detail-popup {
-  display: none;
-  position: absolute;
-  left: 300px;
-  top: 0;
-  width: 350px;
-  background: rgba(18, 18, 18, 0.95);
-  border: 1px solid #F5E6B8;
-  border-radius: 10px;
-  padding: 1rem 1.25rem;
-  color: #CCCCCC;
   font-size: 0.95rem;
-  line-height: 1.5;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-  z-index: 100;
-  opacity: 0;
-  transform: translateX(-10px);
-  transition: all 0.3s ease;
 }
 
-/* Hover korle popup show korbe */
-.skill-item-wrapper:hover .inline-detail-popup {
+.s-badge {
+  color: #888888;
+  font-size: 0.75rem;
+}
+
+.skill-row-item:hover, .skill-row-item.active {
+  background: rgba(245, 230, 184, 0.07);
+  border-color: rgba(245, 230, 184, 0.3);
+  transform: translateX(4px);
+}
+
+.skill-row-item:hover .s-badge, .skill-row-item.active .s-badge {
+  color: #F5E6B8;
+}
+
+/* Right Side Premium Display Card Pane */
+.skills-preview-pane {
+  flex: 1.5;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+  border: 1px solid rgba(245, 230, 184, 0.15);
+  border-radius: 16px;
+  padding: 2rem;
+  min-height: 280px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.preview-card-box {
+  display: none;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: all 0.4s ease-in-out;
+}
+
+.preview-card-box.active {
   display: block;
-  opacity: 1;
-  transform: translateX(0);
+  animation: cardSmoothFade 0.4s forwards;
+}
+
+.pc-header .pc-tag {
+  display: inline-block;
+  background: rgba(245, 230, 184, 0.1);
+  color: #F5E6B8;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pc-header h3 {
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.85rem;
+}
+
+.pc-desc {
+  color: #CCCCCC;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.pc-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.pc-chips span {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #E0E0E0;
+  padding: 0.35rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+@keyframes cardSmoothFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
