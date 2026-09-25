@@ -321,3 +321,27 @@ function switchSkillBox(sectionId, boxId, element) {
   }
   element.classList.add('active');
 }
+/**
+ * Theme Toggle Functionality
+ */
+function initThemeToggle() {
+  const themeToggleBtn = document.querySelector('.theme-toggle'); // ba apnar button-er selector
+  if (!themeToggleBtn) return;
+
+  // Local storage theke ager theme load kora
+  const savedTheme = localStorage.getItem('jis_theme');
+  if (savedTheme === 'light') {
+    document.body.classList.add('light-mode');
+  }
+
+  themeToggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+    
+    // Theme save kora
+    if (document.body.classList.contains('light-mode')) {
+      localStorage.setItem('jis_theme', 'light');
+    } else {
+      localStorage.setItem('jis_theme', 'dark');
+    }
+  });
+}
