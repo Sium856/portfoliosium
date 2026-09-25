@@ -301,15 +301,21 @@ function initTypedText() {
   setTimeout(typeTick, delay);
 }
 
-function previewLang(element, boxId) {
-  const categoryBlock = element.closest('.skill-category-block');
-  const cards = categoryBlock.querySelectorAll('.preview-card-box');
+function switchSkillBox(sectionId, boxId, element) {
+  const section = document.getElementById(sectionId);
+  if (!section) return;
+
+  // Hide all cards within this section's box
+  const cards = section.querySelectorAll('.preview-card-box');
   cards.forEach(card => card.classList.remove('active'));
 
-  const rows = categoryBlock.querySelectorAll('.skill-row-item');
+  // Remove active from sibling rows in this section block
+  const parentBlock = element.closest('.skills-master-section');
+  const rows = parentBlock.querySelectorAll('.skill-row-item');
   rows.forEach(row => row.classList.remove('active'));
 
-  const targetCard = categoryBlock.querySelector('#' + boxId);
+  // Show target card and highlight active row
+  const targetCard = section.querySelector('#' + boxId);
   if (targetCard) {
     targetCard.classList.add('active');
   }
