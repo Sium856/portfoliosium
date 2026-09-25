@@ -348,105 +348,87 @@
     </h2>
   </div>
 
-  <div class="skills-section-wrapper">
-    <!-- Left Side: Skills Category Menu -->
-    <div class="skills-menu">
-      
+  <div class="skills-container-grid">
+    
+    <!-- Languages Category -->
+    <div class="skill-category-box">
       <div class="skills-category-title">Languages</div>
-      <div class="skill-tab active" onclick="openSkill(event, 'lang-c')">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" class="skill-logo">
-        <span>C Programming</span>
-      </div>
-      <div class="skill-tab" onclick="openSkill(event, 'lang-cpp')">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" class="skill-logo">
-        <span>C++</span>
-      </div>
-      <div class="skill-tab" onclick="openSkill(event, 'lang-python')">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="skill-logo">
-        <span>Python (Basic)</span>
-      </div>
-      <div class="skill-tab" onclick="openSkill(event, 'lang-java')">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="skill-logo">
-        <span>Java (Learning)</span>
-      </div>
-
-      <div class="skills-category-title" style="margin-top: 1.5rem;">Core & CS</div>
-      <div class="skill-tab" onclick="openSkill(event, 'core-dsa')">
-        <svg class="skill-logo" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"></rect></svg>
-        <span>Data Structures & Algorithms</span>
-      </div>
-      <div class="skill-tab" onclick="openSkill(event, 'core-oop')">
-        <svg class="skill-logo" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg>
-        <span>OOP & Discrete Math</span>
-      </div>
-
-      <div class="skills-category-title" style="margin-top: 1.5rem;">Tools & Workflow</div>
-      <div class="skill-tab" onclick="openSkill(event, 'tool-vscode')">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" class="skill-logo">
-        <span>VS Code & IDEs</span>
-      </div>
-      <div class="skill-tab" onclick="openSkill(event, 'tool-git')">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="skill-logo">
-        <span>Git, GitHub & Netlify</span>
-      </div>
-
-    </div>
-
-    <!-- Right Side: Animated Details Display Panel -->
-    <div class="skills-display-panel">
       
-      <!-- C Details -->
-      <div id="lang-c" class="skill-panel-content active">
-        <h3>C Programming</h3>
-        <p>Pointers, memory allocation, structure logic, and algorithmic implementations like Huffman coding trees.</p>
+      <div class="skill-item-wrapper" onmouseenter="showDetail(this, 'c-desc')" onmouseleave="hideDetail(this)">
+        <div class="skill-tab">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" class="skill-logo">
+          <span>C Programming</span>
+        </div>
+        <div class="inline-detail-popup">My foundational beginner language. Covers basic syntax, pointers, memory allocation, structure logic, and Huffman coding.</div>
       </div>
 
-      <!-- C++ Details -->
-      <div id="lang-cpp" class="skill-panel-content">
-        <h3>C++ & Competitive Programming</h3>
-        <p>STL (Standard Template Library), Graph traversals (BFS/DFS), Greedy algorithms, and problem-solving practice on Codeforces, LeetCode, and BeeCrowd.</p>
+      <div class="skill-item-wrapper" onmouseenter="showDetail(this, 'cpp-desc')" onmouseleave="hideDetail(this)">
+        <div class="skill-tab">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" class="skill-logo">
+          <span>C++</span>
+        </div>
+        <div class="inline-detail-popup">Object-Oriented Programming, STL, and efficient syntax for competitive programming.</div>
       </div>
 
-      <!-- Python Details -->
-      <div id="lang-python" class="skill-panel-content">
-        <h3>Python</h3>
-        <p>Syntax fundamentals, scripting workflows, automation, and foundational concepts for AI/ML engineering.</p>
+      <div class="skill-item-wrapper" onmouseenter="showDetail(this, 'py-desc')" onmouseleave="hideDetail(this)">
+        <div class="skill-tab">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="skill-logo">
+          <span>Python (Basic)</span>
+        </div>
+        <div class="inline-detail-popup">Syntax fundamentals, scripting workflows, automation, and AI/ML engineering foundations.</div>
       </div>
 
-      <!-- Java Details -->
-      <div id="lang-java" class="skill-panel-content">
-        <h3>Java</h3>
-        <p>Currently learning core concepts, class structures, and object-oriented paradigms as part of university coursework.</p>
+      <div class="skill-item-wrapper" onmouseenter="showDetail(this, 'java-desc')" onmouseleave="hideDetail(this)">
+        <div class="skill-tab">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="skill-logo">
+          <span>Java (Learning)</span>
+        </div>
+        <div class="inline-detail-popup">Currently learning core concepts, class-object structures, and programming paradigms.</div>
       </div>
-
-      <!-- Core DSA Details -->
-      <div id="core-dsa" class="skill-panel-content">
-        <h3>Data Structures & Algorithms</h3>
-        <p>Arrays, Linked Lists, Searching & Sorting algorithms, Dynamic Programming (DP), and Complexity Analysis.</p>
-      </div>
-
-      <!-- Core OOP Details -->
-      <div id="core-oop" class="skill-panel-content">
-        <h3>OOP & Discrete Mathematics</h3>
-        <p>Classes, inheritance, polymorphism, encapsulation, logic gates, graph theory, and mathematical foundations for computer science.</p>
-      </div>
-
-      <!-- VS Code Details -->
-      <div id="tool-vscode" class="skill-panel-content">
-        <h3>IDEs & Environments</h3>
-        <p>Proficient in using Visual Studio Code, PyCharm, and Code::Blocks for seamless coding, debugging, and project execution.</p>
-      </div>
-
-      <!-- Git Details -->
-      <div id="tool-git" class="skill-panel-content">
-        <h3>Version Control & Deployment</h3>
-        <p>Managing code versions via Git/GitHub, hosting live web projects on Netlify, and building applications with Google AI Studio.</p>
-      </div>
-
     </div>
+
+    <!-- Core CS Category -->
+    <div class="skill-category-box" style="margin-top: 1.5rem;">
+      <div class="skills-category-title">Core CS & Theory</div>
+      
+      <div class="skill-item-wrapper" onmouseenter="showDetail(this)" onmouseleave="hideDetail(this)">
+        <div class="skill-tab">
+          <span>Data Structures & Algorithms</span>
+        </div>
+        <div class="inline-detail-popup">Arrays, Linked Lists, Trees, Graph theory, BFS/DFS Traversals, Dynamic Programming (DP), and complexity analysis.</div>
+      </div>
+
+      <div class="skill-item-wrapper" onmouseenter="showDetail(this)" onmouseleave="hideDetail(this)">
+        <div class="skill-tab">
+          <span>OOP & Discrete Math</span>
+        </div>
+        <div class="inline-detail-popup">Classes, inheritance, polymorphism, encapsulation, logic gates, and graph theory.</div>
+      </div>
+    </div>
+
+    <!-- Tools & Workflow Category -->
+    <div class="skill-category-box" style="margin-top: 1.5rem;">
+      <div class="skills-category-title">Tools & Workflow</div>
+      
+      <div class="skill-item-wrapper" onmouseenter="showDetail(this)" onmouseleave="hideDetail(this)">
+        <div class="skill-tab">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" class="skill-logo">
+          <span>VS Code & IDEs</span>
+        </div>
+        <div class="inline-detail-popup">Proficient in VS Code, PyCharm, and Code::Blocks for coding and debugging.</div>
+      </div>
+
+      <div class="skill-item-wrapper" onmouseenter="showDetail(this)" onmouseleave="hideDetail(this)">
+        <div class="skill-tab">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="skill-logo">
+          <span>Git, GitHub & Netlify</span>
+        </div>
+        <div class="inline-detail-popup">Managing code versions via Git/GitHub, hosting live projects on Netlify, and Google AI Studio workflows.</div>
+      </div>
+    </div>
+
   </div>
 </section>
-
     <hr class="section-divider" />
 
     <!-- ====================================================================
