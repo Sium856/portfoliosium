@@ -1925,3 +1925,7 @@ a {
     transform: translateY(0);
   }
 }
+body.light-mode {
+  background-color: #ffffff !important;
+  color: #111111 !important;
+}
