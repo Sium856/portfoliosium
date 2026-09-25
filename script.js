@@ -301,22 +301,17 @@ function initTypedText() {
   setTimeout(typeTick, delay);
 }
 
-function previewSkill(skillId) {
-  // Hide all preview cards
-  const cards = document.querySelectorAll('.preview-card-box');
+function previewLang(element, boxId) {
+  const categoryBlock = element.closest('.skill-category-block');
+  const cards = categoryBlock.querySelectorAll('.preview-card-box');
   cards.forEach(card => card.classList.remove('active'));
 
-  // Remove active class from all rows
-  const rows = document.querySelectorAll('.skill-row-item');
-  rows.hooks?.forEach?.(r => r.classList.remove('active'));
+  const rows = categoryBlock.querySelectorAll('.skill-row-item');
   rows.forEach(row => row.classList.remove('active'));
 
-  // Show target preview card
-  const targetCard = document.getElementById(skillId);
+  const targetCard = categoryBlock.querySelector('#' + boxId);
   if (targetCard) {
     targetCard.classList.add('active');
   }
-
-  // Highlight hovered row item
-  event?.currentTarget?.classList?.add('active');
+  element.classList.add('active');
 }
